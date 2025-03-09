@@ -1,10 +1,6 @@
+using System.ComponentModel.DataAnnotations;
 namespace MvcMovie.Models;
-
-public class BMI
-{
-    public double weight { get; set; }
-    public double Height { get; set; }
-    public double Bmi { get; set; }
-    public string Result { get; set; } // kết quả trả về
-
-}
+public class BMI{
+    public double Weight{get;set;}
+    public double Height{get;set;}
+    }

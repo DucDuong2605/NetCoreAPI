@@ -9,7 +9,8 @@ namespace MvcMovie.Data
         {
             public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options)
             { }
-            public Dbset<Person> Person { get; set; }
+            public Dbset<Person> Persons { get; set; }
+            public DbSet<Employee> Employee{get;set;}
         }
     }
 }
