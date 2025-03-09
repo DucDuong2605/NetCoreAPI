@@ -1,14 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
-namespace MvcMovie.Data{
-
 namespace MvcMovie.Data
 {
-    public class ApplicationDbcontext : DbContext
+
+    namespace MvcMovie.Data
     {
-        public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options ) : base( options )
-        {}
-        public Dbset<Person> Person { get; set;}
+        public class ApplicationDbcontext : DbContext
+        {
+            public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options)
+            { }
+            public Dbset<Person> Person { get; set; }
+        }
     }
-}
 }

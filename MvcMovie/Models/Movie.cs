@@ -4,7 +4,7 @@ namespace MvsMovie.Modenl;
 
 public class Movie
 {
-    public int Id { get; set; }  
+    public int Id { get; set; }
     public string? Title { get; set; }
     public DateTime releaseDate { get; set; }
     public string? Genre { get; set; }
