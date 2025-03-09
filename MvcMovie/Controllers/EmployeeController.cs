@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-namespace MvcMovie.Controllers{
+namespace MvcMovie.Controllers;
     public class EmployeeController: Controller{
         public IActionResult Create(){
             return View();
@@ -9,4 +9,3 @@ namespace MvcMovie.Controllers{
             return View();
         }
     }
-}

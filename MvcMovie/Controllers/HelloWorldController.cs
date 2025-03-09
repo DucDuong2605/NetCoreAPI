@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-namespace MvcMovie.Controllers
-{
+namespace MvcMovie.Controllers;
     public class HelloWorldController : Controller
     { 
         // GET: /HelloWorld/
@@ -16,4 +15,3 @@ namespace MvcMovie.Controllers
             return "This is the Welcome action method...";
         }
     }
-}

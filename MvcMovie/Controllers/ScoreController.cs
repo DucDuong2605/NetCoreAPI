@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using MvcMovie.Models;
 
-namespace MvcMovie.Controllers{
+namespace MvcMovie.Controllers;
     public class ScoreController:Controller{
         public IActionResult Index(){
             return View();
@@ -23,4 +23,3 @@ namespace MvcMovie.Controllers{
             return View();
         }
     }
-}

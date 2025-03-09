@@ -1,4 +1,4 @@
-using System.componentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcMovie.Models;
 public class DaiLy : HeThongPhanPhoi

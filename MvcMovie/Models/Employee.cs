@@ -1,5 +1,5 @@
-using System.Reflection.Metadata.Ecma335;
-using System.componentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcMovie.Models;
 public class Employee : Person 

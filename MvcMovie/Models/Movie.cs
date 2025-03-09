@@ -1,4 +1,3 @@
-using System;
 using System.componentModel.DataAnnotations;
 
 namespace MvsMovie.Modenl;

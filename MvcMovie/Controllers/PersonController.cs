@@ -1,8 +1,11 @@
-using System.Runtime.InteropServices.WindowsRuntime;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MvcMovie.Data;
+using MvcMovie.Models;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
-namespace MvcMovie.Controller
-{
+namespace MvcMovie.Controller;
     public class PersonController : Controller
     {
         public IActionResult Index()
@@ -18,5 +21,3 @@ namespace MvcMovie.Controller
         }
 
     }
-
-}
