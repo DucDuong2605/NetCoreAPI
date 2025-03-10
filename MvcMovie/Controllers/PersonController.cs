@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace mvc.Controllers
 {
-    public class PersonController(ApplicationDbContext context) : Controller
+    public class PersonController(ApplicationBbContext context) : Controller
     {
-        private readonly ApplicationDbContext _context = context;
+        private readonly ApplicationBbContext _context = context;
 
         public async Task<IActionResult> Index(){
             var model = await _context.Persons.ToListAsync();
@@ -22,7 +22,7 @@ namespace mvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address,Job")] Person person){
+        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address,")] Person person){
             if(ModelState.IsValid)
             {
                 _context.Add(person);
@@ -46,7 +46,7 @@ namespace mvc.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address,Job")]Person person){
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address")]Person person){
             if( id != person.PersonId)
             {
                 return NotFound();

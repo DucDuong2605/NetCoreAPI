@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "c:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "c:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "C:\\Net_Core_API\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "c:\\Net_Core_API\\MvcMovie\\obj\\",
+        "outputPath": "C:\\Net_Core_API\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"

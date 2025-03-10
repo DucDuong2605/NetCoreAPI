@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-namespace MvcMovie.Models
+
+namespace MvcMovie.Models;
+public class Employee
 {
-     [Table("Employees")]
-public class Employee : Person
-{
-    [Key]
-    public string EmployeeId { get; set;}
-    public int Age { get; set;}
-}
+    public int Id { get; set; }
+    public string? FullName { get; set; }
+    // Thêm các thuộc tính kháFuFuc nếu cần
 }
