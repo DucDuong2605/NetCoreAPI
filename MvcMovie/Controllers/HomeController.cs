@@ -4,24 +4,20 @@ using MvcMovie.Models;
 
 namespace MvcMovie.Controllers;
 
-public class HomeController : Controller
+public class HomeController(ILogger<HomeController> logger) : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger<HomeController> _logger = logger;
 
     public IActionResult Index()
     {
         return View();
     }
     [HttpPost]
-    public IActionResult Index(string FullName, string Address){
+    public IActionResult Index(string FullName, string Address)
+    {
         string strOutput = "Xin chao "+ FullName + " den tu " + Address;
-        @ViewBag.MassageBack = strOutput;
-         return View();
+        @ViewBag.Massage = strOutput;
+        return View();
     }
     
     public IActionResult Privacy()

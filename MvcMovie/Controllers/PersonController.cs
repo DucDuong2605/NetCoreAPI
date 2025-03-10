@@ -1,19 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MvcMovie.Data;
 using MvcMovie.Models;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-namespace MvcMovie.Controllers
+using Microsoft.EntityFrameworkCore;
+
+namespace mvc.Controllers
 {
-    public class PersonController: Controller
+    public class PersonController(ApplicationDbContext context) : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public PersonController(ApplicationDbContext context){
-            _context = context;
-        }
+        private readonly ApplicationDbContext _context = context;
+
         public async Task<IActionResult> Index(){
-            var model = await _context.Person.ToListAsync();
+            var model = await _context.Persons.ToListAsync();
             return View(model);
         }
 
@@ -36,11 +33,11 @@ namespace MvcMovie.Controllers
         }
 
         public async Task<IActionResult> Edit(string id){
-            if( id == null|| _context.Person == null)
+            if( id == null|| _context.Persons == null)
             {
                 return NotFound();
             }
-            var person = await _context.Person.FindAsync(id);
+            var person = await _context.Persons.FindAsync(id);
             if(person == null)
             {
                 return NotFound();
@@ -76,12 +73,12 @@ namespace MvcMovie.Controllers
         }
 
         public async Task<IActionResult> Delete(string id){
-            if( id == null|| _context.Person == null)
+            if( id == null|| _context.Persons == null)
             {
                 return NotFound();
             }
             
-            var person = await _context.Person.FirstOrDefaultAsync(m => m.PersonId == id);
+            var person = await _context.Persons.FirstOrDefaultAsync(m => m.PersonId == id);
             if(person == null)
             {
                 return NotFound();
@@ -92,14 +89,14 @@ namespace MvcMovie.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id){
-            if(_context.Person == null)
+            if(_context.Persons == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Person' is null.");
             }
-            var person = await _context.Person.FindAsync(id);
+            var person = await _context.Persons.FindAsync(id);
             if(person != null)
             {
-                _context.Person.Remove(person);
+                _context.Persons.Remove(person);
             }
 
             await _context.SaveChangesAsync();
@@ -107,7 +104,7 @@ namespace MvcMovie.Controllers
         }
 
         private bool PersonExists(string id){
-            return (_context.Person?.Any(e => e.PersonId == id)).GetValueOrDefault();
+            return (_context.Persons?.Any(e => e.PersonId == id)).GetValueOrDefault();
         }
 
        

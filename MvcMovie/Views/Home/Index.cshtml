@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<form aria-action="Index">
+<form asp-action="Index">
     <label>Nhập họ tên :</label>
     <input type=" text" name="Fullname">
     <label>Nhập địa chỉ :</label>
@@ -10,4 +10,4 @@
     <input type=" submit" value="gửi dữ liệu">
 </form>
 
-<h1>@viewBag.messageBack</h1>
+<h1>@ViewBag.message</h1>
