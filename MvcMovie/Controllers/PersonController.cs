@@ -3,7 +3,7 @@ using MvcMovie.Data;
 using MvcMovie.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace mvc.Controllers
+namespace MvcMovie.Controllers
 {
     public class PersonController(ApplicationBbContext context) : Controller
     {
